@@ -37,7 +37,9 @@ class Panio:
                 self.mazo.append('img/' + str(i) + j + '.png')
                 
     def sacar_carta(self):
+        
         self.carta = self.mazo[random.randint(0,len(self.mazo)-1)]
+        print(self.carta)
         self.mazo.remove(self.carta)
         return self.carta
     
@@ -49,7 +51,7 @@ class Panio:
             self.carta1 = Blackjack21.PhotoImage(file=self.manos[i][0])
             if i == self.crup:
                 self.carta1 = Blackjack21.PhotoImage(file="img/red_back.png")
-            self.carta2 = Blackjack21.PhotoImage(file=self.manos[0][1])
+            self.carta2 = Blackjack21.PhotoImage(file=self.manos[i][1])
             self.lista_cartas.append([self.carta1,self.carta2])
         for j in range(self.cant_jug):
             self.canvas1.create_image(self.posiciones[j][0], self.posiciones[j][1], image=self.lista_cartas[j][0], anchor="nw")
