@@ -3,14 +3,13 @@ from tkinter import ttk
 import random
 from PIL import Image
 
-
+listacartas = ["img/1C.png", "img/1D.png", "img/1H.png", "img/1S.png", "img/2C.png", "img/2D.png", "img/2H.png", "img/2S.png", "img/3C.png", "img/3D.png", "img/3H.png", "img/3S.png", "img/4C.png", "img/4D.png", "img/4H.png", "img/4S.png", "img/5C.png", "img/5D.png", "img/5H.png", "img/5S.png", "img/6C.png", "img/6D.png", "img/6H.png", "img/6S.png", "img/7C.png", "img/7D.png", "img/7H.png", "img/7S.png", "img/8C.png", "img/8D.png", "img/8H.png", "img/8S.png", "img/9C.png", "img/9D.png", "img/9H.png", "img/9S.png", "img/10C.png", "img/10D.png", "img/10H.png", "img/10S.png", "img/11C.png", "img/11D.png", "img/11H.png", "img/11S.png", "img/12C.png", "img/12D.png", "img/12H.png", "img/12S.png", "img/13C.png", "img/13D.png", "img/13H.png", "img/13S.png"]
 
 class Jugador:
     posicion = []
     nro = 0
     crup = False
     
-
 class Panio: 
     manos = []
     mazo = []
@@ -45,7 +44,7 @@ class Panio:
     
     def iniciar_juego(self):
         self.ventana1=Blackjack21.Tk()
-        self.canvas1=Blackjack21.Canvas(self.ventana1, width=1300, height=700, background="darkgreen")
+        self.canvas1=Blackjack21.Canvas(self.ventana1, width=1300, height=800, background="darkgreen")
         self.canvas1.grid(column=0, row=0)
         for i in range(self.cant_jug):
             self.carta1 = Blackjack21.PhotoImage(file=self.manos[i][0])
@@ -68,7 +67,6 @@ class Panio:
             if self.carta not in self.manos[jugador]:
                 self.manos[jugador].append(self.carta)
                 
-
 p1 = Panio(4)
 p1.repartir(0)
 p1.repartir(1)
