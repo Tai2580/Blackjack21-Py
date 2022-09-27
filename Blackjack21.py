@@ -76,3 +76,4 @@ if __name__ == "__main__":
         p1.repartir(i)
     
     p1.iniciar_juego()
+a
